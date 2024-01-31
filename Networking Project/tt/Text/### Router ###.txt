@@ -1,0 +1,17 @@
+### Router ###
+
+1. ICT.Router
+2  HR.Router
+3. FINANCE.Router
+4. SALES.Router
+
+### Switch ## 
+1. SAL-SW
+2. ICT-SW
+3. SVR-SW
+4. FIN-SW
+5. HR-SW
+
+
+
+

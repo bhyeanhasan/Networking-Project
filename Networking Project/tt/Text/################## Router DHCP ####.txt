@@ -1,0 +1,55 @@
+################## Router DHCP ####################
+
+1. FIN 
+
+
+service dhcp
+ip dhcp excluded-address 182.20.100.1
+ip dhcp pool FINVOICE
+network 182.20.100.0 255.255.255.224
+default-router 182.20.100.1
+option 150 ip 182.20.100.1
+exit
+do wr
+
+
+######## HR ############
+
+ip dhcp excluded-address 182.20.100.33
+ip dhcp pool HRVOICE
+network 182.20.100.32 255.255.255.224
+default-router 182.20.100.33
+option 150 ip 182.20.100.33
+exit
+do wr
+
+
+
+######### SALE ##############
+
+
+
+
+ip dhcp excluded-address 182.20.100.65
+ip dhcp pool SALEVOICE
+network 182.20.100.64 255.255.255.224
+default-router 182.20.100.65
+option 150 ip 182.20.100.65
+exit
+
+do wr
+
+
+######### ICT ##############
+
+
+ip dhcp excluded-address 172.16.100.97
+ip dhcp pool ICTVOICE
+network 172.16.100.96 255.255.255.224
+default-router 172.16.100.97
+option 150 ip 172.16.100.97
+exit
+
+do wr
+
+

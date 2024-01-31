@@ -1,0 +1,44 @@
+########## OSPF ############### 
+
+### ICT ######
+
+router ospf 10
+network 10.10.10.4 0.0.0.3 area 0
+network 10.10.10.12 0.0.0.3 area 0
+network 192.168.100.128 0.0.0.7 area 0
+network 192.168.100.96 0.0.0.31 area 0
+network 172.16.100.96 0.0.0.31 area 0 
+
+do wr
+
+
+########### FIN ###########
+router ospf 10
+network 20.30.25.4 0.0.0.3 area 0
+network 20.30.25.0 0.0.0.3 area 0
+network 207.103.100.0 0.0.0.31 area 0
+network 182.20.100.0 0.0.0.31 area 0 
+
+do wr
+
+
+
+######### HR ######## 
+router ospf 10
+network 20.30.25.8 0.0.0.3 area 0
+network 20.30.25.0 0.0.0.3 area 0
+network 207.103.100.32 0.0.0.31 area 0
+network 182.20.100.32 0.0.0.31 area 0 
+
+do wr
+
+
+######### SAL ###########
+
+router ospf 10
+network 20.30.25.8 0.0.0.3 area 0
+network 20.30.25.12 0.0.0.3 area 0
+network 207.103.100.64 0.0.0.31 area 0
+network 182.20.100.64 0.0.0.31 area 0 
+
+do wr

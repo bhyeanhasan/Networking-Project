@@ -1,0 +1,11 @@
+hostname SVR-Router
+enable password cisco
+line con 0
+password cisco
+login
+exit
+banner motd #NO UNAUTHORIZE ACCESS#
+service password-encryption 
+no ip domain-lookup 
+
+do wr

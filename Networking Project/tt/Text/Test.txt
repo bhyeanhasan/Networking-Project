@@ -1,0 +1,6 @@
+Test
+
+ping 
+
+
+ssh -l cisco 20.30.25.10

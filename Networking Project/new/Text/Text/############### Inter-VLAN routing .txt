@@ -1,0 +1,82 @@
+############### Inter-VLAN routing  #################  FIN.Router
+
+
+int fa0/0.10
+encapsulation dot1Q 10
+ip address 207.103.100.1 255.255.255.224
+ip helper-address 207.103.100.130
+exit
+
+int fa0/0.100
+encapsulation dot1Q 100
+ip address 182.20.100.1 255.255.255.224
+exit
+
+do wr
+
+
+
+##### HR ######## 
+
+
+
+int fa0/0.20
+encapsulation dot1Q 20
+ip address 207.103.100.33 255.255.255.224
+ip helper-address 207.103.100.130
+exit
+
+int fa0/0.100
+encapsulation dot1Q 100
+ip address 182.20.100.33 255.255.255.224
+exit
+
+do wr
+
+
+
+
+SALES ################ 
+
+int fa0/0.30
+encapsulation dot1Q 30
+ip address 207.103.100.65 255.255.255.224
+ip helper-address 207.103.100.130
+exit
+
+int fa0/0.100
+encapsulation dot1Q 100
+ip address 182.20.100.65 255.255.255.224
+exit
+
+do wr
+
+
+ICT ################ 
+
+int fa0/0.40
+encapsulation dot1Q 40
+ip address 207.103.100.97 255.255.255.224
+ip helper-address 207.103.100.130
+exit
+
+int fa0/0.100
+encapsulation dot1Q 100
+ip address 182.20.100.97 255.255.255.224
+exit
+
+do wr
+
+
+
+
+########## ICT ########
+
+
+int f0/1.50
+encapsulation dot1Q 50
+ip address 207.103.100.129 255.255.255.248
+exit
+
+do wr
+

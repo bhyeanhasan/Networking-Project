@@ -1,0 +1,104 @@
+
+#################### Dial peering ######################
+
+
+FIN ROUTER
+
+
+dial-peer voice 1 voip
+destination-pattern 2..
+session target ipv4:20.30.25.2
+exit
+
+
+dial-peer voice 2 voip
+destination-pattern 4..
+session target ipv4:20.30.25.9
+exit
+
+
+dial-peer voice 3 voip
+destination-pattern 3..
+session target ipv4:20.30.25.10
+exit
+
+
+do wr
+
+
+
+
+#################### HR ######################
+
+
+dial-peer voice 1 voip
+destination-pattern 1..
+session target ipv4:20.30.25.1
+exit
+
+
+dial-peer voice 4 voip
+destination-pattern 3..
+session target ipv4:20.30.25.10
+exit
+
+
+dial-peer voice 5 voip
+destination-pattern 4..
+session target ipv4:20.30.25.14
+exit
+
+
+do wr
+
+
+
+#################### SAL ######################
+
+
+dial-peer voice 3 voip
+destination-pattern 1..
+session target ipv4:20.30.25.1
+exit
+
+
+dial-peer voice 4 voip
+destination-pattern 2..
+session target ipv4:20.30.25.9
+exit
+
+
+dial-peer voice 5 voip
+destination-pattern 4..
+session target ipv4:20.30.25.14
+exit
+
+
+do wr
+
+
+
+#################### ICT ######################
+
+
+dial-peer voice 2 voip
+destination-pattern 1..
+session target ipv4:20.30.25.5
+exit
+
+
+dial-peer voice 5 voip
+destination-pattern 3..
+session target ipv4:20.30.25.13
+exit
+
+
+dial-peer voice 6 voip
+destination-pattern 2..
+session target ipv4:20.30.25.9
+exit
+
+
+do wr
+
+
